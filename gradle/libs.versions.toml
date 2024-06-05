@@ -1,0 +1,17 @@
+[versions]
+csi-core = "1.0.0-SNAPSHOT"
+netty = "4.1.110.Final"
+
+[libraries]
+shypl-tool-lang = "org.shypl.tool:tool-lang:1.0.0-SNAPSHOT"
+shypl-tool-logging = { module = "org.shypl.tool:tool-logging", version = "1.0.0-SNAPSHOT"}
+shypl-tool-utils = { module = "org.shypl.tool:tool-utils", version = "1.0.0-SNAPSHOT"}
+shypl-tool-io = { module = "org.shypl.tool:tool-io", version = "1.0.0-SNAPSHOT"}
+
+shypl-csi-core-common = {module = "org.shypl.csi:csi-core-common", version.ref = "csi-core"}
+shypl-csi-core-client = {module = "org.shypl.csi:csi-core-client", version.ref = "csi-core"}
+shypl-csi-core-server = {module = "org.shypl.csi:csi-core-server", version.ref = "csi-core"}
+
+netty-transport = {module = "io.netty:netty-transport", version.ref = "netty"}
+netty-transport-native-epoll = {module = "io.netty:netty-transport-native-epoll", version.ref = "netty"}
+netty-transport-codec-http = {module = "io.netty:netty-codec-http", version.ref = "netty"}
