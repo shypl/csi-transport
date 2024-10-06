@@ -4,9 +4,7 @@ import io.netty.channel.ChannelHandlerContext
 import io.netty.handler.codec.http.websocketx.BinaryWebSocketFrame
 import org.shypl.csi.core.ChannelHandler
 import org.shypl.tool.logging.ownLogger
-import org.shypl.tool.logging.warn
 import java.net.SocketException
-import java.nio.channels.ClosedChannelException
 
 class WebSocketChannelHandler(
 	private val handler: ChannelHandler
