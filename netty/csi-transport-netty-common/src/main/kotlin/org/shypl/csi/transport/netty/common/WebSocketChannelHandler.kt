@@ -3,6 +3,10 @@ package org.shypl.csi.transport.netty.common
 import io.netty.channel.ChannelHandlerContext
 import io.netty.handler.codec.http.websocketx.BinaryWebSocketFrame
 import org.shypl.csi.core.ChannelHandler
+import org.shypl.tool.logging.ownLogger
+import org.shypl.tool.logging.warn
+import java.net.SocketException
+import java.nio.channels.ClosedChannelException
 
 class WebSocketChannelHandler(
 	private val handler: ChannelHandler
@@ -29,5 +33,13 @@ class WebSocketChannelHandler(
 	
 	override fun channelUnregistered(ctx: ChannelHandlerContext) {
 		handler.handleChannelClose()
+	}
+	
+	@Suppress("OVERRIDE_DEPRECATION")
+	override fun exceptionCaught(ctx: ChannelHandlerContext, cause: Throwable) {
+		if (cause !is SocketException) {
+			ownLogger.warn("Uncaught exception in netty channel pipeline", cause)
+		}
+		ctx.close()
 	}
 }

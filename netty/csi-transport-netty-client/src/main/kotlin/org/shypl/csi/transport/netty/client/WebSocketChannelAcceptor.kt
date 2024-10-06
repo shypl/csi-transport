@@ -7,6 +7,8 @@ import org.shypl.csi.transport.netty.common.ChannelDelegate
 import org.shypl.csi.transport.netty.common.NettyChannelHandler
 import org.shypl.csi.transport.netty.common.WebSocketChannelHandler
 import org.shypl.csi.transport.netty.common.WebSocketChannelWriter
+import org.shypl.tool.logging.ownLogger
+import java.net.SocketException
 
 internal class WebSocketChannelAcceptor(
 	private val acceptor: ChannelAcceptor
@@ -32,5 +34,13 @@ internal class WebSocketChannelAcceptor(
 	
 	override fun channelUnregistered(ctx: ChannelHandlerContext) {
 		acceptor.acceptFail()
+	}
+	
+	@Suppress("OVERRIDE_DEPRECATION")
+	override fun exceptionCaught(ctx: ChannelHandlerContext, cause: Throwable) {
+		if (cause !is SocketException) {
+			ownLogger.warn("Uncaught exception in netty channel pipeline", cause)
+		}
+		ctx.close()
 	}
 }
