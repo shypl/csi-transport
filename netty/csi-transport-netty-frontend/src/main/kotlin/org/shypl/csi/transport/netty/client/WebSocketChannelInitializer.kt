@@ -8,7 +8,7 @@ import io.netty.handler.codec.http.HttpObjectAggregator
 import io.netty.handler.codec.http.websocketx.WebSocketClientProtocolHandler
 import io.netty.handler.codec.http.websocketx.WebSocketVersion
 import io.netty.handler.codec.http.websocketx.extensions.compression.WebSocketClientCompressionHandler
-import org.shypl.csi.core.client.ChannelAcceptor
+import org.shypl.csi.core.frontend.ChannelAcceptor
 import java.net.URI
 
 internal class WebSocketChannelInitializer(private val acceptor: ChannelAcceptor, private val uri: URI) : ChannelInitializer<SocketChannel>() {

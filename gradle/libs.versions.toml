@@ -1,15 +1,15 @@
 [versions]
-csi-core = "1.0.0-SNAPSHOT"
+csi-core = "1.0.0"
 netty = "4.1.117.Final"
 
 [libraries]
-shypl-tool-logging = { module = "org.shypl.tool:tool-logging", version = "1.0.0-SNAPSHOT"}
-shypl-tool-utils = { module = "org.shypl.tool:tool-utils", version = "1.0.0-SNAPSHOT"}
-shypl-tool-io = { module = "org.shypl.tool:tool-io", version = "1.0.0-SNAPSHOT"}
+shypl-tool-logging = { module = "org.shypl.tool:tool-logging", version = "1.0.0"}
+shypl-tool-utils = { module = "org.shypl.tool:tool-utils", version = "1.0.0"}
+shypl-tool-io = { module = "org.shypl.tool:tool-io", version = "1.0.0"}
 
 shypl-csi-core-common = {module = "org.shypl.csi:csi-core-common", version.ref = "csi-core"}
-shypl-csi-core-client = {module = "org.shypl.csi:csi-core-client", version.ref = "csi-core"}
-shypl-csi-core-server = {module = "org.shypl.csi:csi-core-server", version.ref = "csi-core"}
+shypl-csi-core-frontend = {module = "org.shypl.csi:csi-core-frontend", version.ref = "csi-core"}
+shypl-csi-core-backend = {module = "org.shypl.csi:csi-core-backend", version.ref = "csi-core"}
 
 netty-transport = {module = "io.netty:netty-transport", version.ref = "netty"}
 netty-transport-native-epoll = {module = "io.netty:netty-transport-native-epoll", version.ref = "netty"}

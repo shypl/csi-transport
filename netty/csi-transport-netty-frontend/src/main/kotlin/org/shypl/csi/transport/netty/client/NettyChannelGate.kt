@@ -6,8 +6,8 @@ import io.netty.channel.EventLoopGroup
 import io.netty.channel.epoll.EpollEventLoopGroup
 import io.netty.channel.epoll.EpollSocketChannel
 import io.netty.channel.socket.nio.NioSocketChannel
-import org.shypl.csi.core.client.ChannelAcceptor
-import org.shypl.csi.core.client.ChannelGate
+import org.shypl.csi.core.frontend.ChannelAcceptor
+import org.shypl.csi.core.frontend.ChannelGate
 import org.shypl.tool.logging.ownLogger
 import java.net.SocketAddress
 

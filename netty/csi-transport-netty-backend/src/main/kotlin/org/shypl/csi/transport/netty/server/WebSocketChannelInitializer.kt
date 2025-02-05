@@ -6,7 +6,7 @@ import io.netty.handler.codec.http.HttpObjectAggregator
 import io.netty.handler.codec.http.HttpServerCodec
 import io.netty.handler.codec.http.websocketx.WebSocketServerProtocolHandler
 import io.netty.handler.codec.http.websocketx.extensions.compression.WebSocketServerCompressionHandler
-import org.shypl.csi.core.server.ChannelAcceptor
+import org.shypl.csi.core.backend.ChannelAcceptor
 
 internal class WebSocketChannelInitializer(acceptor: ChannelAcceptor) : ChannelInitializer<SocketChannel>() {
 	
