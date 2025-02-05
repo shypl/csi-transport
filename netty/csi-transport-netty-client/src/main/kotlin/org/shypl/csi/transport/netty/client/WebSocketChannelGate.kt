@@ -2,7 +2,7 @@ package org.shypl.csi.transport.netty.client
 
 import io.netty.channel.ChannelHandler
 import io.netty.channel.EventLoopGroup
-import org.shypl.csi.core.frontend.ChannelAcceptor
+import org.shypl.csi.core.client.ChannelAcceptor
 import java.net.InetSocketAddress
 import java.net.URI
 

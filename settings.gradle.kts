@@ -5,6 +5,6 @@ rootProject.name = "csi-transport"
 
 include(
 	"netty:csi-transport-netty-common",
-	"netty:csi-transport-netty-frontend",
-	"netty:csi-transport-netty-backend"
+	"netty:csi-transport-netty-client",
+	"netty:csi-transport-netty-server"
 )

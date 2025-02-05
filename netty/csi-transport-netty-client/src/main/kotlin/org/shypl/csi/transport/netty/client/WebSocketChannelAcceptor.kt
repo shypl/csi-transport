@@ -2,7 +2,7 @@ package org.shypl.csi.transport.netty.client
 
 import io.netty.channel.ChannelHandlerContext
 import io.netty.handler.codec.http.websocketx.WebSocketClientProtocolHandler
-import org.shypl.csi.core.frontend.ChannelAcceptor
+import org.shypl.csi.core.client.ChannelAcceptor
 import org.shypl.csi.transport.netty.common.ChannelDelegate
 import org.shypl.csi.transport.netty.common.NettyChannelHandler
 import org.shypl.csi.transport.netty.common.WebSocketChannelHandler

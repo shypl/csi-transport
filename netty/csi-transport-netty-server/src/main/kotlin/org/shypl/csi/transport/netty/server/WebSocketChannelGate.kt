@@ -3,7 +3,7 @@ package org.shypl.csi.transport.netty.server
 import io.netty.bootstrap.ServerBootstrap
 import io.netty.channel.ChannelHandler
 import io.netty.channel.ChannelOption
-import org.shypl.csi.core.backend.ChannelAcceptor
+import org.shypl.csi.core.server.ChannelAcceptor
 import org.shypl.csi.transport.netty.common.toSocketAddress
 import java.net.SocketAddress
 
