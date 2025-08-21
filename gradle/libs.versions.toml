@@ -1,6 +1,6 @@
 [versions]
 csi-core = "1.0.0"
-netty = "4.1.121.Final"
+netty = "4.2.4.Final"
 
 [libraries]
 shypl-tool-logging = { module = "org.shypl.tool:tool-logging", version = "1.0.0"}
