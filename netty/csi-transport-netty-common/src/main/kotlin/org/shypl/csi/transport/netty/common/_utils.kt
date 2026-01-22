@@ -1,17 +1,18 @@
 package org.shypl.csi.transport.netty.common
 
 import io.netty.channel.EventLoopGroup
+import io.netty.channel.MultiThreadIoEventLoopGroup
 import io.netty.channel.epoll.Epoll
-import io.netty.channel.epoll.EpollEventLoopGroup
-import io.netty.channel.nio.NioEventLoopGroup
+import io.netty.channel.epoll.EpollIoHandler
+import io.netty.channel.nio.NioIoHandler
 import java.net.InetSocketAddress
 import java.net.SocketAddress
 
 fun factoryEventLoopGroup(threads: Int, tryUseEpoll: Boolean): EventLoopGroup {
-	return if (tryUseEpoll && Epoll.isAvailable())
-		EpollEventLoopGroup(threads)
-	else
-		NioEventLoopGroup(threads)
+	return MultiThreadIoEventLoopGroup(
+		threads,
+		if (tryUseEpoll && Epoll.isAvailable()) EpollIoHandler.newFactory() else NioIoHandler.newFactory()
+	)
 }
 
 
