@@ -1,11 +1,11 @@
 [versions]
-csi-core = "1.0.0"
-netty = "4.2.4.Final"
+csi-core = "1.0.1"
+netty = "4.2.9.Final"
 
 [libraries]
-shypl-tool-logging = { module = "org.shypl.tool:tool-logging", version = "1.0.0"}
-shypl-tool-utils = { module = "org.shypl.tool:tool-utils", version = "1.1.0"}
-shypl-tool-io = { module = "org.shypl.tool:tool-io", version = "1.0.0"}
+shypl-tool-logging = { module = "org.shypl.tool:tool-logging", version = "1.0.1"}
+shypl-tool-utils = { module = "org.shypl.tool:tool-utils", version = "1.2.2"}
+shypl-tool-io = { module = "org.shypl.tool:tool-io", version = "1.0.1"}
 
 shypl-csi-core-common = {module = "org.shypl.csi:csi-core-common", version.ref = "csi-core"}
 shypl-csi-core-client = {module = "org.shypl.csi:csi-core-client", version.ref = "csi-core"}
